@@ -1,0 +1,271 @@
+// ==UserScript==
+// @name         EspressoClient
+// @version      0.0.2
+// @description  Maid's Cafe Client Starblast
+// @author       𝘛𝘩𝘦𝘔𝘢𝘳𝘥𝘰𝘯#7986 & Pix#7008
+// @match        https://starblast.io/*
+// @icon         https://media.discordapp.net/attachments/1012889833552756737/1017862651554041918/MaidscafeIconTest.png?width=450&height=412
+// @grant        none
+// @run-at       document-start
+// ==/UserScript==
+
+const modName = "EspressoClient";
+const log = (msg) => console.log(`%c[${modName}] ${msg}`, "color: #FF00A6");
+
+function runner(){
+  localStorage.clientcolor = `#000000`
+  localStorage.clientcolor2 = `#e8cfff`
+  localStorage.clientcolor3 = `#ffbef1`
+  localStorage.clientcolor4 = `#b5baff`
+
+  if (document.getElementById("play").style.color != `#fff`) {
+    //play button
+    document.getElementById("play").style.color = `#000000`
+    document.getElementById("play").style.background = `rgb(255,190,241)`
+    document.getElementById("play").style.background = `linear-gradient(140deg, rgba(255,190,241,1) 0%, rgba(181,186,255,1) 100%)`
+    document.getElementById("play").style.borderRadius = `0 3px`
+    document.getElementById("play").style.boxShadow = `0 0 0 2px ${localStorage.clientcolor}`
+    document.getElementById("play").style.WebkitBackdropFilter = `blur(0px)`
+    document.getElementById("play").style.backdropFilter = `blur(0px)`
+    document.getElementById("play").style.textShadow = `0 0 30px ${localStorage.clientcolor}`
+    //arrows
+    document.getElementById(`nextMode`).style.color = localStorage.clientcolor4
+    document.getElementById(`nextMode`).style.textShadow = `0 0 7px ${localStorage.clientcolor}`
+    document.getElementById(`prevMode`).style.color = localStorage.clientcolor3
+    document.getElementById(`prevMode`).style.textShadow = `0 0 7px ${localStorage.clientcolor}`
+    //name box
+    document.getElementsByClassName("inputwrapper")[0].style.boxShadow = `0 0 3px ${localStorage.clientcolor2}`
+    document.getElementsByClassName("inputwrapper")[0].style.background = `linear-gradient(to top,${localStorage.clientcolor} 0%,${localStorage.clientcoloralt} 7%,${localStorage.clientcoloralt} 95%,${localStorage.clientcolor} 90%)`
+    //modding space
+    document.getElementById("moddingspace").style.color = localStorage.clientcolor4
+    document.getElementById("moddingspace").style.background = `radial-gradient(ellipse at center,${localStorage.clientcolor} 0,${localStorage.clientcoloralt} 150%)`
+    document.getElementById("moddingspace").style.boxShadow = `0 0 4px ${localStorage.clientcolor4}`
+    document.getElementById("moddingspace").style.textShadow = `0 0 10px ${localStorage.clientcolor4}`
+    //ecp
+    document.getElementById("donate").style.color = localStorage.clientcolor4
+    document.getElementById("donate").style.background = `radial-gradient(ellipse at center,${localStorage.clientcolor} 0,${localStorage.clientcoloralt} 150%)`
+    document.getElementById("donate").style.boxShadow = `0 0 4px ${localStorage.clientcolor4}`
+    document.getElementById("donate").style.textShadow = `0 0 10px ${localStorage.clientcolor4}`
+    //leaderboard
+    document.getElementById("rankings").style.color = localStorage.clientcolor4
+    document.getElementById("rankings").style.background = `radial-gradient(ellipse at center,${localStorage.clientcolor} 0,${localStorage.clientcoloralt} 150%)`
+    document.getElementById("rankings").style.boxShadow = `0 0 4px ${localStorage.clientcolor4}`
+    document.getElementById("rankings").style.textShadow = `0 0 10px ${localStorage.clientcolor4}`
+    //training
+    document.getElementById("training").style.color = localStorage.clientcolor4
+    document.getElementById("training").style.background = `radial-gradient(ellipse at center,${localStorage.clientcolor} 0,${localStorage.clientcoloralt} 150%)`
+    document.getElementById("training").style.boxShadow = `0 0 4px ${localStorage.clientcolor4}`
+    document.getElementById("training").style.textShadow = `0 0 10px ${localStorage.clientcolor4}`
+    //twitter button
+    document.getElementsByClassName("sbg-twitter")[1].style.color = localStorage.clientcolor2
+    document.getElementsByClassName("sbg-twitter")[1].style.background = `radial-gradient(ellipse at center,${localStorage.clientcolor} 0,${localStorage.clientcoloralt} 150%)`
+    document.getElementsByClassName("sbg-twitter")[1].style.boxShadow = `0 0 4px ${localStorage.clientcolor2}`
+    document.getElementsByClassName("sbg-twitter")[1].style.textShadow = `0 0 4px ${localStorage.clientcolor2}`
+    //FB button
+    document.getElementsByClassName("sbg-facebook")[1].style.color = localStorage.clientcolor2
+    document.getElementsByClassName("sbg-facebook")[1].style.background = `radial-gradient(ellipse at center,${localStorage.clientcolor} 0,${localStorage.clientcoloralt} 150%)`
+    document.getElementsByClassName("sbg-facebook")[1].style.boxShadow = `0 0 4px ${localStorage.clientcolor2}`
+    document.getElementsByClassName("sbg-facebook")[1].style.textShadow = `0 0 4px ${localStorage.clientcolor2}`
+    //settings button
+    document.getElementsByClassName("sbg-gears")[1].style.color = localStorage.clientcolor2
+    document.getElementsByClassName("sbg-gears")[1].style.background = `radial-gradient(ellipse at center,${localStorage.clientcolor} 0,${localStorage.clientcoloralt} 150%)`
+    document.getElementsByClassName("sbg-gears")[1].style.boxShadow = `0 0 4px ${localStorage.clientcolor2}`
+    document.getElementsByClassName("sbg-gears")[1].style.textShadow = `0 0 4px ${localStorage.clientcolor2}`
+    //info button
+    document.getElementsByClassName("sbg-info")[1].style.color = localStorage.clientcolor2
+    document.getElementsByClassName("sbg-info")[1].style.background = `radial-gradient(ellipse at center,${localStorage.clientcolor} 0,${localStorage.clientcoloralt} 150%)`
+    document.getElementsByClassName("sbg-info")[1].style.boxShadow = `0 0 4px ${localStorage.clientcolor2}`
+    document.getElementsByClassName("sbg-info")[1].style.textShadow = `0 0 4px ${localStorage.clientcolor2}`
+    //changelog
+    document.getElementsByClassName(`changelog-new`)[1].children[0].children[0].children[0].style.color = localStorage.clientcolor3
+    document.getElementsByClassName(`changelog-new`)[1].children[1].style.color = localStorage.clientcolor3
+    document.getElementsByClassName("changelog-new")[0].style.color = localStorage.clientcolor3
+    document.getElementsByClassName("changelog-new")[0].style.background = `radial-gradient(ellipse at center,${localStorage.clientcolor} 0,${localStorage.clientcoloralt} 150%)`
+    document.getElementsByClassName("changelog-new")[0].style.boxShadow = `0 0 4px ${localStorage.clientcolor3}`
+    document.getElementsByClassName("changelog-new")[0].style.textShadow = `rgb(0 0 0) 0px 0px 3px`
+    //music
+    document.getElementsByClassName("changelog-new")[2].style.color = localStorage.clientcolor3
+    document.getElementsByClassName("changelog-new")[2].style.background = `radial-gradient(ellipse at center,${localStorage.clientcolor} 0,${localStorage.clientcoloralt} 150%)`
+    document.getElementsByClassName("changelog-new")[2].style.boxShadow = `0 0 4px ${localStorage.clientcolor3}`
+    document.getElementsByClassName("changelog-new")[2].style.textShadow = `rgb(0 0 0) 0px 0px 3px`
+    document.getElementsByClassName(`community`)[0].children[0].style.color = `rgb(255,190,241)`
+    document.getElementsByClassName(`community`)[0].children[1].style.color = `rgb(255,190,241)`
+    //socials
+    document.getElementsByClassName(`community`)[2].children[0].style.color = localStorage.clientcolor3
+    document.getElementsByClassName(`community`)[2].children[1].style.color = localStorage.clientcolor3
+    document.getElementsByClassName(`community`)[2].children[2].style.color = localStorage.clientcolor3
+    document.getElementsByClassName(`community`)[2].children[3].style.color = localStorage.clientcolor3
+    document.getElementsByClassName("changelog-new")[4].style.color = localStorage.clientcolor3
+    document.getElementsByClassName("changelog-new")[4].style.background = `radial-gradient(ellipse at center,${localStorage.clientcolor} 0,${localStorage.clientcoloralt} 150%)`
+    document.getElementsByClassName("changelog-new")[4].style.boxShadow = `0 0 4px ${localStorage.clientcolor3}`
+    document.getElementsByClassName("changelog-new")[4].style.textShadow = `rgb(0 0 0) 0px 0px 3px`
+    //menus
+    document.getElementsByClassName("modal")[0].style.color = `rgb(255, 190, 241);background: linear-gradient(135deg, rgb(0, 0, 0) 0px, rgb(0, 0, 0) 150%);box-shadow: rgb(255, 190, 241) 0px 0px 4px;text-shadow: rgb(0 0 0) 0px 0px 4px;width: 800px;max-height: 100%;height: auto;display: block;top: 0px;`
+    document.getElementsByClassName("modal")[0].style.background = `linear-gradient(135deg,${localStorage.clientcolor} 0,${localStorage.clientcoloralt} 150%)`
+    document.getElementsByClassName("modal")[0].style.boxShadow = `0 0 4px ${localStorage.clientcolor3}`
+    document.getElementsByClassName("modal")[0].style.textShadow = `0 0 4px ${localStorage.clientcolor3}`
+    //loading bar
+    document.getElementsByClassName(`loaderprogress`)[0].style.background = localStorage.clientcolor4
+    document.getElementsByClassName(`gameloaderwrapper`)[0].style.border = `2px solid ${localStorage.clientcolor4}`
+    document.getElementsByClassName(`gameloaderwrapper`)[0].style.boxShadow = `0 0 4px ${localStorage.clientcolor4}`
+    //text below loading bar
+    document.getElementsByClassName(`textprogress`)[0].style.color = localStorage.clientcolor4
+    document.getElementsByClassName(`textprogress`)[0].style.textShadow = `0 0 10px ${localStorage.clientcolor}`
+    ////Header
+    document.getElementsByClassName(`header`)[0].style.background = `hsl(0deg 0% 0%)`
+    document.getElementsByClassName(`header`)[0].style.borderBottom = `5px solid hsl(271deg 28% 59%)`
+    document.getElementsByClassName(`modaltitle`)[0].style.color = `rgb(232, 207, 255)`
+    document.getElementsByClassName(`modaltitle`)[0].style.textShadow = `rgb(113 3 233 / 45%) 0px 0px 4px`
+    document.getElementsByClassName(`modalbody`)[0].style.textShadow = `rgb(113 3 233 / 45%) 0px 0px 4px`
+    document.getElementsByClassName(`modalbody`)[0].style.color = localStorage.clientcolor2
+
+//En proceso "option", "slider", "range", "scrollbar"
+     if (document.getElementsByClassName("donate-btn")[1]) {
+      //custom game button
+      document.getElementsByClassName("donate-btn")[1].style.color = `#fff`
+      document.getElementsByClassName("donate-btn")[1].style.background = `radial-gradient(ellipse at center,${localStorage.clientcoloralt} 0,${localStorage.clientcolor} 150%)`
+      document.getElementsByClassName("donate-btn")[1].style.boxShadow = `0 0 7px ${localStorage.clientcolor}`
+      document.getElementsByClassName("donate-btn")[1].style.textShadow = `0 0 7px ${localStorage.clientcolor}`
+      //ecp and ship preview
+      for(let i = 0; i < document.getElementsByClassName("frozenbg").length; i++){
+        document.getElementsByClassName("frozenbg")[i].style.background = localStorage.clientcolor4
+        document.getElementsByClassName("frozenbg")[i].style.boxShadow = `0 0 6px ${localStorage.clientcolor4}`
+        document.getElementsByClassName("frozenbg")[i].style.textShadow = `0 0 7px ${localStorage.clientcolor4}`
+      }
+      //show ecp button
+      document.getElementById("viewEcp").style.color = localStorage.clientcolor4
+      document.getElementById("viewEcp").style.background = localStorage.clientcolor4
+      document.getElementById("viewEcp").style.boxShadow = `0 0 7px ${localStorage.clientcolor3}`
+      document.getElementById("viewEcp").style.textShadow = `0 0 7px ${localStorage.clientcolor3}`
+      //ecp key box
+      document.getElementById("ECPKey").style.color = localStorage.clientcolor4
+      document.getElementById("ECPKey").style.background = localStorage.clientcolor4
+      document.getElementById("ECPKey").style.boxShadow = `0 0 7px ${localStorage.clientcolor3}`
+      document.getElementById("ECPKey").style.textShadow = `0 0 7px ${localStorage.clientcolor3}`
+      //delete ecp button
+      document.getElementById("removeEcp").style.color = localStorage.clientcolor4
+      document.getElementById("removeEcp").style.background = localStorage.clientcolor4
+      document.getElementById("removeEcp").style.boxShadow = `0 0 7px ${localStorage.clientcolor3}`
+      document.getElementById("removeEcp").style.textShadow = `0 0 7px ${localStorage.clientcolor3}`
+    }
+  }
+  if (document.getElementsByClassName("stats")[0].children.length > 0) {
+    //continue button
+    document.getElementById("continue_btn").style.color = localStorage.clientcolor3
+    document.getElementById("continue_btn").style.background = localStorage.clientcolor3
+    document.getElementById("continue_btn").style.boxShadow = `0 0 4px ${localStorage.clientcolor3}`
+    document.getElementById("continue_btn").style.textShadow = `0 0 4px ${localStorage.clientcolor3}`
+    //death stats
+    document.getElementsByClassName("stats")[0].style.border = `2px solid ${localStorage.clientcolor3}`
+    document.getElementsByClassName("stats")[0].style.boxShadow = `0 0 15px ${localStorage.clientcolor3}`
+    document.getElementsByClassName("stats")[0].style.background = localStorage.clientcolor3
+    //death stats separators
+    for(let i = 0; i < document.getElementsByClassName("stats")[0].children.length; i++){
+      document.getElementsByClassName("stats")[0].children[i].style.borderBottom = `1px solid ${localStorage.clientcolor3}`
+    }
+  }
+
+  if (document.getElementsByClassName("fa-vk")[0] != undefined) {
+    //link bar
+    document.getElementsByClassName("stats")[0].children[3].style.color = localStorage.clientcolor3
+    document.getElementsByClassName("stats")[0].children[3].style.background = localStorage.clientcolor3
+    document.getElementsByClassName("stats")[0].children[3].style.border = `0 solid ${localStorage.clientcolor3}`
+    document.getElementsByClassName("stats")[0].children[3].style.boxShadow = `0 0 6px ${localStorage.clientcolor3}`
+    //respawn button
+    document.getElementById("respawn_btn").style.color = localStorage.clientcolor3
+    document.getElementById("respawn_btn").style.background = localStorage.clientcolor3
+    document.getElementById("respawn_btn").style.boxShadow = `0 0 7px ${localStorage.clientcolor3}`
+    document.getElementById("respawn_btn").style.textShadow = `0 0 7px ${localStorage.clientcolor3}`
+    //quit button
+    document.getElementById("refresh_btn").style.color = localStorage.clientcolor3
+    document.getElementById("refresh_btn").style.background = localStorage.clientcolor4
+    document.getElementById("refresh_btn").style.boxShadow = `0 0 7px ${localStorage.clientcolor3}`
+    document.getElementById("refresh_btn").style.textShadow = `0 0 7px ${localStorage.clientcolor3}`
+    //death stats
+    document.getElementsByClassName("stats")[0].style.border = `2px solid ${localStorage.clientcolor3}`
+    document.getElementsByClassName("stats")[0].style.boxShadow = `0 0 15px ${localStorage.clientcolor3}`
+    document.getElementsByClassName("stats")[0].style.background = localStorage.clientcolor3
+    //death text
+    document.getElementById("overlay").style.color = localStorage.clientcolor3
+    //death twitter button
+    document.getElementsByClassName("fa-twitter")[0].style.color = localStorage.clientcolor3
+    document.getElementsByClassName("fa-twitter")[0].style.background = localStorage.clientcolor4
+    document.getElementsByClassName("fa-twitter")[0].style.boxShadow = `0 0 7px ${localStorage.clientcolor3}`
+    document.getElementsByClassName("fa-twitter")[0].style.textShadow = `0 0 7px ${localStorage.clientcolor3}`
+    //death FB button
+    document.getElementsByClassName("fa-facebook")[0].style.color = localStorage.clientcolor3
+    document.getElementsByClassName("fa-facebook")[0].style.background = localStorage.clientcolor3
+    document.getElementsByClassName("fa-facebook")[0].style.boxShadow = `0 0 7px ${localStorage.clientcolor3}`
+    document.getElementsByClassName("fa-facebook")[0].style.textShadow = `0 0 7px ${localStorage.clientcolor3}`
+    //death vk button
+    document.getElementsByClassName("fa-vk")[0].style.color = localStorage.clientcolor3
+    document.getElementsByClassName("fa-vk")[0].style.background = localStorage.clientcolor3
+    document.getElementsByClassName("fa-vk")[0].style.boxShadow = `0 0 7px ${localStorage.clientcolor3}`
+    document.getElementsByClassName("fa-vk")[0].style.textShadow = `0 0 7px ${localStorage.clientcolor3}`
+    //death FB button
+    document.getElementsByClassName("fa-envelope")[0].style.color = `#fff`
+    document.getElementsByClassName("fa-envelope")[0].style.background = `radial-gradient(ellipse at center,${localStorage.clientcolor} 0,${localStorage.clientcoloralt} 150%)`
+    document.getElementsByClassName("fa-envelope")[0].style.boxShadow = `0 0 7px ${localStorage.clientcolor}`
+    document.getElementsByClassName("fa-envelope")[0].style.textShadow = `0 0 7px ${localStorage.clientcolor}`
+    //death stats separators
+    for(let i = 0; i < document.getElementsByClassName("stats")[0].children.length; i++){
+      document.getElementsByClassName("stats")[0].children[i].style.borderBottom = `1px solid ${localStorage.clientcolor4}`
+    }
+  }
+
+function addCss(url) {
+        var link = document.createElement('link');
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = url;
+        document.getElementsByTagName('head')[0].appendChild(link);
+    }
+    addCss('https://maidness.github.io/Espresso-css/expresso.css');
+
+  if (window.location.pathname == "/") {
+    if (window.location.pathname == "/") {
+      document.getElementsByClassName(`textcentered community changelog-new`)[0].innerHTML = `\n              <a href="https://open.spotify.com/user/gilpom/playlist/47N9rRbMXezlPXvhqVM3lJ?si=6bHzE9A9S-2TGh7C4OndkA" target="_blank" style="color: rgb(255, 255, 255);"><svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="1.414"><path d="M8 0C3.6 0 0 3.6 0 8s3.6 8 8 8 8-3.6 8-8-3.56-8-8-8zm3.68 11.56c-.16.24-.44.32-.68.16-1.88-1.16-4.24-1.4-7.04-.76-.28.08-.52-.12-.6-.36-.08-.28.12-.52.36-.6 3.04-.68 5.68-.4 7.76.88.28.12.32.44.2.68zm.96-2.2c-.2.28-.56.4-.84.2-2.16-1.32-5.44-1.72-7.96-.92-.32.08-.68-.08-.76-.4-.08-.32.08-.68.4-.76 2.92-.88 6.52-.44 9 1.08.24.12.36.52.16.8zm.08-2.24C10.16 5.6 5.88 5.44 3.44 6.2c-.4.12-.8-.12-.92-.48-.12-.4.12-.8.48-.92 2.84-.84 7.52-.68 10.48 1.08.36.2.48.68.28 1.04-.2.28-.68.4-1.04.2z" fill-rule="nonzero"></path></svg><br>Spotify</a>\n              <a href="https://www.deezer.com/playlist/5343057502" target="_blank" style="color: rgb(255, 255, 255);"><svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="1.414"><path d="M9.812 12.464h2.917v-.884H9.81v.884zm-6.54 0h2.916v-.884H3.27v.884zm-3.272 0h2.917v-.884H0v.884zm6.54 0h2.92v-.884H6.54v.884zm6.543 0H16v-.884h-2.917v.884zm0-1.15H16v-.883h-2.917v.89zm-6.542 0h2.92v-.883H6.54v.89zm-6.54 0h2.92v-.883H0v.89zm3.27 0h2.92v-.883H3.27v.89zm6.55 0h2.92v-.883H9.81v.89zm0-1.148h2.92v-.884H9.81v.884zm-6.54 0h2.91v-.884H3.27v.884zm-3.27 0h2.91v-.884H0v.884zm6.54 0h2.92v-.884H6.54v.884zm6.55 0H16v-.884h-2.917v.884zm0-1.15H16v-.883h-2.917v.884zm-6.54 0h2.91v-.883H6.54v.884zm-6.54 0h2.91v-.883H0v.884zm9.82 0h2.92v-.883H9.81v.884zm0-1.15h2.92v-.882H9.81v.883zm-9.82 0h2.91v-.88H0v.882zm6.54 0h2.92v-.88H6.54v.882zm6.54 0H16v-.882h-2.917v.884zM6.54 6.72h2.92v-.885H6.54v.884zm6.543-.002H16v-.883h-2.917v.883zM6.54 5.57h2.92v-.885H6.54v.885zm6.543 0H16v-.885h-2.917v.884zm0-1.15H16v-.884h-2.917v.884z"></path></svg><br>Deezer</a>\n            <a href="https://starblast.dankdmitron.dev/" target="_blank" style="color: rgb(255, 255, 255);"><i class='sbg sbg-fly-full'></i><br>SL+</a>\n            <a href="https://starblast-shipyard.github.io/" target="_blank" style="color: rgb(255, 255, 255);"><i class='sbg sbg-fly-full'></i><br>Shipyard</a>\n            <a href="https://starblast.io/modding.html" target="_blank" style="color: rgb(255, 255, 255);"><i class='sbg sbg-modding'></i><br>Modding Space</a>\n            <a href="https://starblast.io/shipeditor/" target="_blank" style="color: rgb(255, 255, 255);"><i class='sbg sbg-fly'></i><br>Ship Editor</a>\n            `
+    }
+  }
+}
+
+function injector(sbCode) {
+  let src = sbCode;
+  let prevSrc = src;
+
+  function checkSrcChange() {
+    if (src == prevSrc) throw new Error("replace did not work");
+    prevSrc = src;
+  }
+
+
+  src = src.replace("https://starblast.io/ecp/gamepedia.png", "https://raw.githubusercontent.com/notrem/image/main/MaidscafeIconTest.jpg");
+  checkSrcChange()
+
+   src = src.replace("Gamepedia", "Maids Icon");
+   checkSrcChange()
+
+  log(`Mod injected`);
+  return src;
+}
+
+if (!window.sbCodeInjectors) window.sbCodeInjectors = [];
+window.sbCodeInjectors.push((sbCode) => {
+  try {
+    return injector(sbCode);
+  } catch (error) {
+    alert(`${modName} failed to load; error:` + error);
+    throw error;
+  }
+});
+
+if(!window.sbCodeRunners) window.sbCodeRunners = [];
+window.sbCodeRunners.push(() => {
+  try {
+    return runner();
+  } catch (error) {
+    alert(`${modName} failed to load`);
+    throw error;
+  }
+});
+log(`Mod loaded`)
